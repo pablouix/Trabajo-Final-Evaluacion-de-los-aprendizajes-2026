@@ -1,0 +1,830 @@
+/* Reset y configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Presentación UAPA */
+.presentation {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.presentation-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.presentation-title {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+}
+
+.presentation-subtitle {
+    font-size: 1.8em;
+    margin-bottom: 40px;
+    color: #f39c12;
+    font-weight: 600;
+}
+
+.presentation-info {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    text-align: left;
+}
+
+.info-block {
+    margin: 25px 0;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border-left: 4px solid #f39c12;
+}
+
+.info-block h3 {
+    color: #f39c12;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.info-block p {
+    font-size: 1.1em;
+    margin: 5px 0;
+    color: #ecf0f1;
+}
+
+.students-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.students-list li {
+    font-size: 1.1em;
+    padding: 8px 0;
+    color: #ecf0f1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.students-list li:last-child {
+    border-bottom: none;
+}
+
+/* Header - Datos del centro educativo */
+.header {
+    background: linear-gradient(135deg, #003d7a 0%, #0056b3 100%);
+    color: white;
+    padding: 40px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header .subtitle {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.institution-info {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.institution-info h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 10px;
+}
+
+.info-row {
+    display: flex;
+    margin: 12px 0;
+    font-size: 1.05em;
+}
+
+.info-row .label {
+    font-weight: bold;
+    min-width: 180px;
+    margin-right: 10px;
+}
+
+.info-row .value {
+    flex: 1;
+}
+
+/* Datos de estudiantes */
+.student-data {
+    background-color: #e9ecef;
+    padding: 40px 0;
+}
+
+.student-data h2 {
+    color: #003d7a;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.students-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.student-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #0056b3;
+    transition: transform 0.3s ease;
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.student-card h3 {
+    color: #0056b3;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    text-align: center;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+}
+
+.student-card .info-row {
+    display: flex;
+    margin: 12px 0;
+    color: #333;
+}
+
+.student-card .info-row .label {
+    font-weight: bold;
+    color: #003d7a;
+    min-width: 140px;
+    margin-right: 10px;
+}
+
+.student-card .info-row .value {
+    color: #555;
+    flex: 1;
+}
+
+/* Registro de asistencia */
+.attendance {
+    background-color: white;
+    padding: 40px 0;
+}
+
+.attendance h2 {
+    color: #003d7a;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+}
+
+.section-description {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-table thead {
+    background-color: #003d7a;
+    color: white;
+}
+
+.attendance-table th,
+.attendance-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.attendance-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.attendance-table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+.attendance-table td:first-child {
+    text-align: left;
+    font-weight: bold;
+}
+
+.present {
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+}
+
+.late {
+    background-color: #ffc107;
+    color: #333;
+    font-weight: bold;
+}
+
+.absent {
+    background-color: #dc3545;
+    color: white;
+    font-weight: bold;
+}
+
+.legend {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.legend-item-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.legend-item {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.attendance-summary {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.attendance-summary h3 {
+    color: #003d7a;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmin(200px, 1fr));
+    gap: 20px;
+}
+
+.summary-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    border-left: 4px solid #0056b3;
+}
+
+.summary-label {
+    display: block;
+    font-weight: bold;
+    color: #003d7a;
+    margin-bottom: 8px;
+}
+
+.summary-value {
+    display: block;
+    font-size: 1.5em;
+    color: #0056b3;
+    font-weight: bold;
+}
+
+/* Evaluación de los aprendizajes */
+.evaluation {
+    background-color: #f0f8ff;
+    padding: 40px 0;
+}
+
+.evaluation h2 {
+    color: #003d7a;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2em;
+    border-bottom: 3px solid #0056b3;
+    padding-bottom: 10px;
+}
+
+.evaluation h3 {
+    color: #0056b3;
+    margin: 30px 0 20px 0;
+    font-size: 1.5em;
+}
+
+.evaluation-info {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.competency-list {
+    margin-top: 20px;
+}
+
+.competency-item {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border-left: 5px solid #0056b3;
+}
+
+.competency-item h4 {
+    color: #003d7a;
+    margin-bottom: 10px;
+}
+
+.competency-item p {
+    color: #555;
+    margin: 10px 0;
+    line-height: 1.8;
+}
+
+.indicators {
+    margin-top: 15px;
+}
+
+.indicators h5 {
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.indicators ul {
+    margin-left: 25px;
+}
+
+.indicators li {
+    margin: 8px 0;
+    color: #555;
+}
+
+.evaluation-instruments {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 30px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.instruments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.instrument-card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 4px solid #28a745;
+    transition: transform 0.3s ease;
+}
+
+.instrument-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.instrument-card h4 {
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+.instrument-card p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.evaluation-criteria {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.criteria-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.criteria-table thead {
+    background-color: #0056b3;
+    color: white;
+}
+
+.criteria-table th,
+.criteria-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.criteria-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.criteria-table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Calificaciones del rendimiento */
+.grades-section {
+    background-color: #e9f7ef;
+    padding: 40px 0;
+}
+
+.grades-section h2 {
+    color: #003d7a;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2em;
+    border-bottom: 3px solid #28a745;
+    padding-bottom: 10px;
+}
+
+.grades-section h3 {
+    color: #28a745;
+    margin: 30px 0 15px 0;
+    font-size: 1.4em;
+}
+
+.grades-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.grades-table thead {
+    background-color: #28a745;
+    color: white;
+}
+
+.grades-table th,
+.grades-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.grades-table td:first-child,
+.grades-table td:nth-child(2) {
+    text-align: left;
+}
+
+.grades-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.grades-table tbody tr:hover {
+    background-color: #d4edda;
+}
+
+.final-grade {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #155724;
+}
+
+.grade-a {
+    background-color: #d4edda;
+    color: #155724;
+    font-weight: bold;
+}
+
+.grade-b {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    font-weight: bold;
+}
+
+.approved {
+    color: #155724;
+    font-weight: bold;
+}
+
+.statistics-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 30px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.statistics-box h3 {
+    color: #003d7a;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.stat-item {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border-top: 3px solid #0056b3;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stat-label {
+    display: block;
+    font-weight: bold;
+    color: #003d7a;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+.stat-value {
+    display: block;
+    font-size: 2.2em;
+    color: #0056b3;
+    font-weight: bold;
+}
+
+.performance-analysis {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 30px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.performance-analysis h3 {
+    color: #003d7a;
+    margin-bottom: 20px;
+}
+
+.analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.analysis-card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #0056b3;
+}
+
+.analysis-card h4 {
+    color: #0056b3;
+    margin-bottom: 15px;
+}
+
+.analysis-card ul {
+    margin-left: 20px;
+}
+
+.analysis-card li {
+    margin: 10px 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+.observations {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 30px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.observations h3 {
+    color: #003d7a;
+    margin-bottom: 20px;
+}
+
+.observations p {
+    margin: 15px 0;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+}
+
+/* Footer */
+.footer {
+    background-color: #003d7a;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 8px 0;
+    font-size: 1.05em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    /* Presentation responsive */
+    .presentation-title {
+        font-size: 2em;
+    }
+    
+    .presentation-subtitle {
+        font-size: 1.3em;
+    }
+    
+    .presentation-info {
+        padding: 20px;
+    }
+    
+    .info-block h3 {
+        font-size: 1em;
+    }
+    
+    .info-block p,
+    .students-list li {
+        font-size: 0.95em;
+    }
+
+    /* Header */
+    .header h1 {
+        font-size: 1.8em;
+    }
+
+    /* Grids */
+    .students-grid,
+    .instruments-grid,
+    .analysis-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    /* Info rows */
+    .info-row {
+        flex-direction: column;
+    }
+
+    .info-row .label {
+        min-width: auto;
+        margin-bottom: 5px;
+    }
+
+    .student-card .info-row {
+        flex-direction: column;
+    }
+
+    .student-card .info-row .label {
+        min-width: auto;
+    }
+
+    /* Tables */
+    .attendance-table,
+    .grades-table,
+    .criteria-table {
+        font-size: 0.85em;
+    }
+
+    .attendance-table th,
+    .attendance-table td,
+    .grades-table th,
+    .grades-table td,
+    .criteria-table th,
+    .criteria-table td {
+        padding: 8px 4px;
+    }
+
+    /* Legend */
+    .legend {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Summary */
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Print styles */
+@media print {
+    /* Presentation print */
+    .presentation {
+        background: white;
+        color: #1a1a2e;
+        page-break-after: auto;
+    }
+    
+    .presentation-subtitle {
+        color: #f39c12;
+    }
+    
+    .info-block h3 {
+        color: #f39c12;
+    }
+    
+    .info-block p,
+    .students-list li {
+        color: #333;
+    }
+
+    /* General print */
+    body {
+        background-color: white;
+    }
+
+    .header,
+    .footer {
+        background: white;
+        color: #003d7a;
+    }
+
+    .student-card:hover,
+    .instrument-card:hover,
+    .stat-item:hover {
+        transform: none;
+    }
+
+    .attendance-table,
+    .grades-table,
+    .criteria-table {
+        page-break-inside: avoid;
+    }
+
+    .student-card,
+    .instrument-card,
+    .analysis-card {
+        page-break-inside: avoid;
+    }
+}
